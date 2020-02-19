@@ -8,7 +8,7 @@
 - has_many :groups, through: :groups_users
 - has_many :groups_users
 
-## commentテーブル
+## messageテーブル
 |Column|Type|Options|
 |------|----|-------|
 |image|text||
@@ -21,8 +21,8 @@
 ## groupテーブル
 |Column|Type|Options|
 |------|----|-------|
-|title|text|null: false|
-|text|text|null: false|
+|name|string|null: false|
+|text|text||
 |user_id|integer|null: false, foreign_key: true|
 ### Association
 - has_many :users, through: :groups_users
