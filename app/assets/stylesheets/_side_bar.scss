@@ -36,11 +36,13 @@
   padding: 20px;
   }
     .group{
-      color: white;
+      p{
+        color: white;      }
       .group-name{
         font-size: 15px;
         margin-right: 5px;
         margin-bottom: 5px;
+        color: white;
       }
       .group-message{
         font-size: 11px;
@@ -49,4 +51,7 @@
       }
       
 
+    }
+    a{
+      text-decoration: none;
     }

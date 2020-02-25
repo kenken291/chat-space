@@ -5,21 +5,16 @@
       %p.side_bar__user-name
       %ul.side_bar__box-menu
         %li.side_bar__edit
-          = link_to  "#" do
+          = link_to new_group_path do
             = icon('fas', 'edit')
           = link_to edit_user_path(current_user) do
             = icon('fas', 'cog', class: 'icon')
-  .side_bar__group-list
-    .group
-      %p.group-name
-        tech camp 
-      %p.group-message 
-        まだメッセージはありません
-      %p.group-name
-        tech expert
-      %p.group-message 
-        3週目
-      %p.group-name
-        tech expert 
-      %p.group-message 
-        やり切る！
+    .side_bar__group-list
+      - current_user.groups.each do |group|
+        .group
+          = link_to '#' do
+            %p.group-name
+              = group.name 
+            %p.group-message 
+              まだメッセージはありません
+            
