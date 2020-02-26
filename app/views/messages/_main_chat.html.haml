@@ -2,22 +2,28 @@
   .main-header
     .main-header__left-box
       %p.main-header__left-box__current-group
-        test
-      %ul.main-header__left-box__member-list
-        member:
-        %li.main-header__left-box__member-list__member
-          masa
+        = @group.name
+      .main-header__left-box__member-list
+        - @group.users.each do |user|
+          = user.name
+        -# .main-header__left-box__member-list__member
+      
+        
     .main-header__right-box
       .main-header__edit-btn
-        = link_to "Edit","#"
+        = link_to edit_group_path(@group) do
+          Edit
 
   .main-body
+    = render @messages
+
   
   .form
-    %form.new_message
+    = form_for [@group, @message] do |f|
       .input-box
-        %input{type: "text", class: "input-box__text", placeholder: "type a message"}
-        %label{class: "input-box__image"}
+        = f.text_field :content, class: 'input-box__text', placeholder: 'type a message'
+        = f.label :image, class: 'input-box__image' do
           = icon('fas', 'image')
-          %input{type: "file", class: "input-box__image__file"}
-      %input{type: "submit", value: "Send", class: "submit-btn"}
+          = f.file_field :image, class: 'input-box__image__file'
+      = f.submit 'Send', class: 'submit-btn'
+
