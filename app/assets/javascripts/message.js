@@ -1,5 +1,4 @@
 $(function(){ 
-
   var buildHTML = function(data) {
     if (data.content && data.image) {
       var html = 
@@ -16,7 +15,7 @@ $(function(){
           <p class="lower-message__content">
             ${data.content}
           </p>
-          <img src=${data.image class="lower-message__image">
+          <img src=${data.image} class="lower-message__image">
         </div>
       </div>`
     } else if (data.content) {
