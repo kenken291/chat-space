@@ -48,6 +48,18 @@
     overflow: scroll;
     .message{
       margin: 46px 40px;
+      .upper-message__user-name{
+        color: #333333;
+        font-size: 16px;
+      }
+      .upper-message__date{
+        color: #999999;
+        font-size: 12px;
+      }
+      .lower-message{
+        color: #434a54;
+        font-size: 14px;
+      }
     }
   }
 
