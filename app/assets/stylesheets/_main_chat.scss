@@ -36,19 +36,20 @@
           top: 28px;
           a{
             text-decoration: none;
+            color: lightblue;
           }
         }
       }
     }
   
-    .main-body{
-      background-color: #fafafa;
-      height: calc(100vh - 100px - 90px);
-      overflow: scroll;
-      .message{
-        margin: 46px 40px;
-      }
+  .main-body{
+    background-color: #fafafa;
+    height: calc(100vh - 100px - 90px);
+    overflow: scroll;
+    .message{
+      margin: 46px 40px;
     }
+  }
 
     .form{
       background-color: #d2d2d2;
