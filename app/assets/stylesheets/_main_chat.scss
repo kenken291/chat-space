@@ -48,21 +48,26 @@
     overflow: scroll;
     .message{
       margin: 46px 40px;
-      .upper-message__user-name{
-        font-weight: bold;
-        color: #333333;
-        font-size: 16px;
+      .upper-message{
+        display: flex;
+        &__user-name{
+          font-weight: bold;
+          color: #333333;
+          font-size: 16px;
+        }
+        &__date{
+          color: #999999;
+          font-size: 12px;
+          margin-left: 10px;
+        }
       }
-      .upper-message__date{
-        color: #999999;
-        font-size: 12px;
-      }
+    }
       .lower-message{
         color: #434a54;
         font-size: 14px;
       }
     }
-  }
+  
 
     .form{
       background-color: #d2d2d2;
